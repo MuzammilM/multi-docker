@@ -1,0 +1,32 @@
+Section 9
+	
+
+	Docker-Compose
+		>Environment variables
+			variableName=value
+				>Sets a variable in the container at run time.
+			variableName
+				>Sets a variable in the container at run time.
+				>value is taken from your computer.
+				>Value not specified.
+
+		>Nginx server
+			>If request comes with /api route to express.
+			>If request comes with / routes to react.
+			>We dont use ports because request shouldnt come from 3000
+			like /api/values/current:3000
+
+		>Communication between different containers via docker-compose
+			>The service name becomes the hostname.
+
+
+>AWS EB Task Containers.
+	>Used when deploying multiple containers.
+
+	>AWSEBDockerrunVersion - The version of aws eb docker to be used.
+	>containerDefinitions - aws alternate to services in docker-compose.yml.
+		>name - dashboard display name.
+		>image - docker hub display repo
+		>hostname - to communicate internally amongst the containers.
+		>essential - if you want a container to kill other containers upon its own failure, set to true. Atleast One service must be essential.
+		
